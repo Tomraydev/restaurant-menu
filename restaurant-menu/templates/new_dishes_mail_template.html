@@ -1,0 +1,21 @@
+{% autoescape off %}
+{% block body_block %}
+    Cześć {{ user.username }},
+    Od wczoraj pojawiły się nowe przepisy
+    <table>
+    <thead>
+        <th>Nowy przepis</th>
+        <th>Opis</th>
+        <th>Cena</th>
+    </thead>
+    {% for dish in dishes %}
+        <tr>
+            <td>{{ dish.name }}</td>
+            <td>{{ dish.description }}</td>
+            <td>{{ dish.price }} zł</td>
+        </tr>
+    {% endfor %}
+    </table>
+
+{% endblock %}
+{% endautoescape %}

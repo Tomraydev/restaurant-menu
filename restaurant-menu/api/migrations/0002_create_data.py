@@ -1,14 +1,14 @@
-from django.conf import settings
-import django.contrib.postgres.fields.jsonb
-from django.db import migrations, models
-import django.db.models.deletion
-
+# fmt: off
 from datetime import timedelta
-from menu.models import Menu, Dish
+
+from api.models import Dish, Menu
+from django.db import migrations
 
 
 def create_initial_data(apps, schema_editor):
     # Menus
+    empty_menu = Menu(name='Puste menu', description='Nie powinno być widoczne dla niezalogowanych użytkowników.')
+    empty_menu.save()
     breakfast = Menu(name='Śniadaniowe', description='Dostępne do godziny 11.')
     breakfast.save()
     lunch = Menu(name='Obiadowe', description='Dostępne do godziny 18.')
@@ -123,9 +123,8 @@ def create_initial_data(apps, schema_editor):
         dinner.dishes.add(dish)
 
 
-
 class Migration(migrations.Migration):
     dependencies = [
-        ('menu', '0001_initial'),
+        ('api', '0001_initial'),
     ]
     operations = [migrations.RunPython(create_initial_data)]

@@ -1,4 +1,5 @@
 import os
+
 from config.settings.common import *
 
 # SECURITY WARNING: keep the secret key used in production secret!

@@ -1,0 +1,10 @@
+# coding standards
+black==22.1.0
+isort==5.10.1
+
+# linters
+pylint==2.12.2
+flake8==4.0.1
+
+# tests
+coverage==6.3.2
