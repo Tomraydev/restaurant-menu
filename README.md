@@ -1,6 +1,6 @@
 # Restaurant Menu
 
-[![codecov](https://codecov.io/gh/tomraydev/restaurant-menu/branch/master/graph/badge.svg)](https://codecov.io/gh/tomraydev/restaurant-menu)
+[![codecov](https://codecov.io/gh/Tomraydev/restaurant-menu/branch/master/graph/badge.svg?token=IC4IKSUABV)](https://codecov.io/gh/Tomraydev/restaurant-menu)
 
 Dane incjalizujące są dodawane automatycznie przy starcie z pliku '0002_create_data.py'.  
 Superuser jest tworzony automatycznie przy starcie.  
